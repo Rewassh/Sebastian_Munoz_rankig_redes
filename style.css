@@ -1,0 +1,198 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --border: #e3e6ee;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-soft: #eef2ff;
+  --danger: #dc2626;
+
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Layout */
+
+.wrap {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* Header */
+
+h1 {
+  margin-bottom: 6px;
+}
+
+.sub {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+/* Cards */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+}
+
+/* Form */
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 1rem;
+}
+
+/* Buttons */
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 6px 14px rgba(79,70,229,0.3);
+}
+
+.ghost {
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.danger {
+  background: var(--danger);
+  color: white;
+}
+
+/* Voting */
+
+.question {
+  background: var(--primary-soft);
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.duel {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+@media (min-width: 900px) {
+  .duel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pick {
+  background: #fff;
+  border: 2px solid var(--border);
+  padding: 18px;
+  border-radius: 18px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.pick:hover {
+  border-color: var(--primary);
+}
+
+.tag {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 12px;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+}
+
+.title {
+  vertical-align: middle;
+  font-size: 1.05rem;
+}
+
+/* Ranking */
+
+.topbox {
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+.toprow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.toprow:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+
+.foot {
+  margin-top: 30px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
